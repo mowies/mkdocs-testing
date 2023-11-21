@@ -1,8 +1,3 @@
----
-subtitle: This is a subtitle
-description: This is the page description
----
-
 # Different tests for MkDocs
 
 This page includes a few different tests for requirements that the Keptn project needs.
@@ -10,7 +5,7 @@ This page includes a few different tests for requirements that the Keptn project
 ## This is a test to include a remote file
 
 ```yaml
-{% include "https://raw.githubusercontent.com/keptn/lifecycle-toolkit/main/docs/content/en/docs/install/assets/values-advance-changes.yaml" %}
+{% include "https://raw.githubusercontent.com/keptn/lifecycle-toolkit/main/docs/content/en/docs/installation/assets/values-advance-changes.yaml" %}
 ```
 
 ## This is a test to include a local file with a relative path

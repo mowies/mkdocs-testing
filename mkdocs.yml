@@ -38,6 +38,7 @@ extra_javascript:
   - assets/versions.js
 extra_css:
   - assets/versions.css
+  - assets/disable-appended-flyout.css
 plugins:
   - social
   - include-markdown:
