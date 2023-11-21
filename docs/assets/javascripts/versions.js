@@ -11,10 +11,10 @@ setTimeout(function() {
         div.querySelector('.rst-current-version').appendChild(caret);
     }
 
-    var CSSLink = document.createElement('link');
-    CSSLink.rel='stylesheet';
-    CSSLink.href = '/assets/stylesheets/versions.css';
-    document.getElementsByTagName('head')[0].appendChild(CSSLink);
+    // var CSSLink = document.createElement('link');
+    // CSSLink.rel='stylesheet';
+    // CSSLink.href = '/assets/stylesheets/versions.css';
+    // document.getElementsByTagName('head')[0].appendChild(CSSLink);
 
     var script = document.createElement('script');
     script.src = 'https://mkdocs-testing.readthedocs.io/_/api/v2/footer_html/?'+
