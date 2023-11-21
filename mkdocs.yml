@@ -36,6 +36,8 @@ site_description: >-
   automate deployment validation. Join the Keptn community for insights.
 extra_javascript:
   - assets/versions.js
+extra_css:
+  - assets/versions.css
 plugins:
   - social
   - include-markdown:
