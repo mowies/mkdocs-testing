@@ -26,3 +26,6 @@ The great thing is that IntelliJ finds it directly and Ctrl clicking on the file
 ## This is a test to show invisible pages
 
 This is a [link to a page](invisible.md) that exists but is not linked for the left-side navigation.
+
+## This is a new test section
+blablablablb
