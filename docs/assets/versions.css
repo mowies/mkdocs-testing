@@ -59,12 +59,12 @@ most styles have to be overriden here */
     bottom: 0;
     left: 0;
     width: 100px !important;
-    background: hsla(173, 100%, 24%, 1) !important;
+    /*background: hsla(173, 100%, 24%, 1) !important;*/
     font-family: inherit !important;
     z-index: 0 !important;
 }
 .rst-versions a{
-    color:#2980B9;
+    /*color:#2980B9;*/
     text-decoration:none
 }
 .rst-versions .rst-badge-small{
@@ -72,7 +72,7 @@ most styles have to be overriden here */
 }
 .rst-versions .rst-current-version{
     padding:12px;
-    background: hsla(173, 100%, 24%, 1) !important;
+    /*background: hsla(173, 100%, 24%, 1) !important;*/
     display:block;
     text-align:right;
     font-size:90%;
@@ -98,7 +98,7 @@ most styles have to be overriden here */
 .rst-versions .rst-other-versions{
     font-size:90%;
     padding:12px;
-    color:gray;
+    /*color:gray;*/
     display:none
 }
 .rst-versions .rst-other-versions hr{

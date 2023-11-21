@@ -13,7 +13,7 @@ setTimeout(function() {
 
     var CSSLink = document.createElement('link');
     CSSLink.rel='stylesheet';
-    CSSLink.href = 'assets/versions.css';
+    CSSLink.href = '/assets/versions.css';
     document.getElementsByTagName('head')[0].appendChild(CSSLink);
 
     var script = document.createElement('script');
