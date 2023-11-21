@@ -35,10 +35,10 @@ site_description: >-
   Enhance Kubernetes monitoring, streamline metrics ingestion, and
   automate deployment validation. Join the Keptn community for insights.
 extra_javascript:
-  - assets/versions.js
+  - assets/javascripts/versions.js
 extra_css:
-  - assets/versions.css
-  - assets/disable-appended-flyout.css
+  - assets/stylesheets/versions.css
+  - assets/stylesheets/disable-appended-flyout.css
 plugins:
   - social
   - include-markdown:
