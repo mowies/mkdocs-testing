@@ -34,11 +34,10 @@ site_description: >-
   Achieve cloud-native application lifecycle orchestration with Keptn.
   Enhance Kubernetes monitoring, streamline metrics ingestion, and
   automate deployment validation. Join the Keptn community for insights.
-#extra_javascript:
-#  - assets/javascripts/versions.js
+extra_javascript:
+  - assets/javascripts/versions.js
 extra_css:
   - assets/stylesheets/versions.css
-#  - assets/stylesheets/disable-appended-flyout.css
 plugins:
   - social
   - include-markdown:
