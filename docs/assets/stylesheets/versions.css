@@ -8,12 +8,14 @@
     right: 4px;
 }
 
-.fa .fa-caret-down {
-    display: none !important;
-}
+/*.fa .fa-caret-down {*/
+/*    display: none !important;*/
+/*}*/
 
 .rst-other-versions {
     text-align: right;
+    background-color: var(--md-primary-fg-color--dark);
+    position: fixed;
 }
 
 .rst-other-versions > dl, .rst-other-versions dt, .rst-other-versions small {
