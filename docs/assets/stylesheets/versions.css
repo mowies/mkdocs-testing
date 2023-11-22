@@ -91,9 +91,9 @@ most styles have to be overriden here */
 .rst-versions .rst-current-version .fa{
     color:#fcfcfc
 }
-.rst-versions .rst-current-version .fa-caret-down{
-    display: none;
-}
+/*.rst-versions .rst-current-version .fa-caret-down{*/
+/*    display: none;*/
+/*}*/
 .rst-versions.shift-up .rst-other-versions{
     display:block
 }
