@@ -35,6 +35,18 @@ site_description: >-
   Achieve cloud-native application lifecycle orchestration with Keptn.
   Enhance Kubernetes monitoring, streamline metrics ingestion, and
   automate deployment validation. Join the Keptn community for insights.
+extra:
+  social:
+    - icon: fontawesome/solid/house
+      link: https://keptn.sh
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/keptnProject
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/keptnproject
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/keptn
+    - icon: fontawesome/brands/slack
+      link: https://cloud-native.slack.com/archives/C017GAX90GM
 extra_javascript:
   - assets/javascripts/versions.js
 extra_css:
@@ -46,7 +58,8 @@ plugins:
   - git-revision-date-localized
 
 nav:
-  - Home: index.md
+  - Home:
+    - index.md
   - Documentation:
     - docs/index.md
     - Tests: docs/tests.md
