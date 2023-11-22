@@ -1,6 +1,7 @@
 site_name: Keptn - Supercharge Your Deployments
 theme:
   name: material
+  custom_dir: overrides
   palette:
     # Palette toggle for light mode
     - scheme: default
