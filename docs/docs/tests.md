@@ -15,7 +15,7 @@ This page includes a few different tests for requirements that the Keptn project
 
 ## This is a test to link to a local file
 
-This is link to the [Install Keptn](./install/install.md) page.
+This is link to the [Install Keptn](installnstall.md) page.
 The great thing is that IntelliJ finds it directly and Ctrl clicking on the file works ❤️.
 
 ## This is a test to show invisible pages

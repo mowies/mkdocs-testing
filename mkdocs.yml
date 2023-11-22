@@ -19,6 +19,7 @@ theme:
   logo: assets/keptn-icon-white.svg
   favicon: https://lifecycle.keptn.sh/images/logo-mobile.svg
   features:
+    - navigation.tabs
     - navigation.tracking
     - navigation.indexes
     - navigation.top
@@ -45,24 +46,26 @@ plugins:
   - git-revision-date-localized
 
 nav:
-  - index.md
-  - Tests: tests.md
-  - Core Concepts: intro/index.md
-  - Get Started:
-      - getting-started/index.md
-      - Get started with Metrics: getting-started/metrics.md
-  - Installation:
-      - install/index.md
-      - Install Keptn: install/install.md
-  - Guides:
-      - guides/index.md
-      - Integrate Keptn with your Applications: guides/integrate.md
-      - Evaluations: guides/evaluations.md
-  - API Reference:
-      - crd-ref/index.md
-      - Lifecycle API:
-          - crd-ref/lifecycle/index.md
-          - v1alpha1: crd-ref/lifecycle/v1alpha1/index.md
-          - v1alpha2: crd-ref/lifecycle/v1alpha2/index.md
-          - v1alpha3: crd-ref/lifecycle/v1alpha3/index.md
-          - v1alpha4: crd-ref/lifecycle/v1alpha4/index.md
+  - Home: index.md
+  - Documentation:
+    - docs/index.md
+    - Tests: docs/tests.md
+    - Core Concepts: docs/intro/index.md
+    - Get Started:
+        - docs/getting-started/index.md
+        - Get started with Metrics: docs/getting-started/metrics.md
+    - Installation:
+        - docs/install/index.md
+        - Install Keptn: docs/install/install.md
+    - Guides:
+        - docs/guides/index.md
+        - Integrate Keptn with your Applications: docs/guides/integrate.md
+        - Evaluations: docs/guides/evaluations.md
+    - API Reference:
+        - docs/crd-ref/index.md
+        - Lifecycle API:
+            - docs/crd-ref/lifecycle/index.md
+            - v1alpha1: docs/crd-ref/lifecycle/v1alpha1/index.md
+            - v1alpha2: docs/crd-ref/lifecycle/v1alpha2/index.md
+            - v1alpha3: docs/crd-ref/lifecycle/v1alpha3/index.md
+            - v1alpha4: docs/crd-ref/lifecycle/v1alpha4/index.md

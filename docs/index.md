@@ -1,6 +1,8 @@
-# Keptn Documentation
+---
+template: home.html
+social:
+  cards_layout_options:
+    title: Keptn - Supercharge your Deployments
+---
 
-This is the homepage.
-Here is some new added text.
-Even more text is here for our user's enjoyment.
-blablablabalbalbalbalbalab
+Superchart your Deployments
