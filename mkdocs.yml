@@ -69,3 +69,9 @@ nav:
             - v1alpha2: docs/crd-ref/lifecycle/v1alpha2/index.md
             - v1alpha3: docs/crd-ref/lifecycle/v1alpha3/index.md
             - v1alpha4: docs/crd-ref/lifecycle/v1alpha4/index.md
+  - Contributing:
+      - contributing/index.md
+      - Software Contributions:
+          - contributing/software/index.md
+          - Development Environment:
+              - contributing/software/dev-env/index.md
