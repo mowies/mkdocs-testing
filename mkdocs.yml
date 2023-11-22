@@ -88,3 +88,5 @@ nav:
           - contributing/software/index.md
           - Development Environment:
               - contributing/software/dev-env/index.md
+  - Community:
+      - community/index.md
