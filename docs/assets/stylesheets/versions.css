@@ -8,9 +8,9 @@
     right: 4px;
 }
 
-/*.fa .fa-caret-down {*/
-/*    display: none !important;*/
-/*}*/
+.fa .fa-caret-down {
+    display: block !important;
+}
 
 .rst-other-versions {
     text-align: right;
