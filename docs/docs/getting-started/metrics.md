@@ -1,4 +1,8 @@
-# Keptn metrics
+---
+comments: true
+---
+
+# Keptn Metrics
 
 The Keptn metrics component
 allows you to define any type of metric
@@ -38,32 +42,15 @@ or just look at it for examples
 as you implement the functionality "from scratch"
 on your local Kubernetes deployment cluster.
 
-This is the first of three exercises in the
-[Introducing Keptn](index.md)
-series.
-After completing this exercise,
-you may want to do the other exercises:
-
-- In [Standardize observability](../intro/usecase-observability.md),
-  you learn how to standardize access
-  to the observability data for your cluster.
-- In
-  [Manage release lifecycle](../intro/usecase-orchestrate.md),
-  you learn how to implement
-  pre- and post-deployment tasks and evaluations
-  to orchestrate the flow of all the [workloads](https://kubernetes.io/docs/concepts/workloads/)
-  that are part of your `application`.
-
 The steps to implement metrics in an existing cluster are:
 
-1. [Install Keptn](../install/install.md)
+1. [Install Keptn](../installation/index.md)
 1. Configure the metrics you want to use:
    - [Define metrics providers](#define-metrics-providers)
    - [Define KeptnMetric information](#define-keptnmetric-information)
-   - [View available metrics](#view-available-metrics)
 
 If you want to create your own cluster to run this exercise,
-follow the instructions in [Installation](../install/install.md).
+follow the instructions in [Installation](../installation/index.md).
 
 ## Define metrics to use
 
@@ -78,7 +65,7 @@ as well as the Kubernetes CLI.
 ### Define metrics providers
 
 Populate a
-[KeptnMetricsProvider](../yaml-crd-ref/metricsprovider.md)
+[KeptnMetricsProvider](../reference/crd-reference/metricsprovider.md)
 resource for each external observability platform you want to use.
 
 For our example, we define two observability platforms:
@@ -91,51 +78,19 @@ including multiple instances of each observability platform.
 Each one must be assigned a unique name,
 identified by the type of platform it is
 and the URL of the target server.
-If the target server is protected by a `secret`,
+If the target server is protected by a Secret,
 provide information about the token and key.
 
-> Note: The video and example application use an older syntax
-  of the `KeptnMetricsProvider` and `KeptnMetric` resources.
-  The syntax shown in this document and the reference page
-  is correct for v0.7.1 and later.
-
-Definition of
-[dev-prometheus](https://github.com/keptn-sandbox/klt-on-k3s-with-argocd/blob/main/simplenode-dev/keptn-prometheus-provider.yaml)
-data source:
+The [keptn-metrics-provider.yaml](../reference/crd-reference/metricsprovider.md#examples)
+file for our example looks like:
 
 ```yaml
-kind: KeptnMetricsProvider
-metadata:
-  name: dev-prometheus
-  namespace: simplenode-dev
-spec:
-  type: prometheus
-  targetserver: "http://prometheus-k8s-monitoring-svc.cluster.local:9090"
-```
-
-Definition of the
-[dev-dynatrace](https://github.com/keptn-sandbox/klt-on-k3s-with-argocd/blob/main/simplenode-dev/dynatrace-provider.yaml.tmp)
-data source.
-Note that the `dev-dynatrace` server is protected by a secret key
-so that information is included in the provider definition:
-
-```yaml
-kind: KeptnMetricsProvider
-metadata:
-  name: dev-dynatrace
-  namespace: simplenode-dev
-spec:
-  type: dynatrace
-  targetServer: "https://hci34192.live.dynatrace.com"
-  secretKeyRef:
-    name: dynatrace
-    key: DT_TOKEN
-...
+{% include "./assets/metric-providers.yaml" %}
 ```
 
 ### Define KeptnMetric information
 
-The [KeptnMetric](../yaml-crd-ref/metric.md) resource
+The [KeptnMetric](../reference/crd-reference/metric.md) resource
 defines the information you want to gather,
 specified as a query for the particular observability platform
 you are using.
@@ -155,27 +110,7 @@ The
 file for our example looks like:
 
 ```yaml
-apiVersion: metrics.keptn.sh/v1alpha2
-kind: Keptnmetric
-metadata:
-  name: available-cpus
-  namespace: simplenode-dev
-spec:
-  provider:
-    name: dev-prometheus
-  query: "sum(kube_node_status_cvapacity{resources`cpu`})"
-  fetchIntervalSeconds: 10
----
-apiVersion: metrics.keptn.sh/v1alpha2
-kind: Keptnmetric
-metadata:
-  name: availability-slo
-  namespace: simplenode-dev
-spec:
-  provider:
-    name: dev-dynatrace
-  query: "func:slo.availability_simplenodeservice"
-  fetchIntervalSeconds: 10
+{% include "./assets/metric.yaml" %}
 ```
 
 Note the following:
@@ -253,7 +188,7 @@ $ kubectl get --raw "/apis/custom.metrics.k8s.io/v1beta2/namespaces/simplenode-d
         "kind": "KeptnMetric",
         "namespace": "simplenode-dev",
         "name": "available-cpus",
-        "apiVersion": "metrics.keptn.sh/v1alpha2"
+        "apiVersion": "metrics.keptn.sh/v1beta1"
       },
       "metric": {
         "name": "available-cpus",
@@ -274,7 +209,7 @@ The Kubernetes HorizontalPodAutoscaler (HPA)
 uses metrics to provide autoscaling for the cluster.
 HPA can retrieve KeptnMetrics and use those metrics to implement HPA.
 See
-Using the [HorizontalPodAutoscaler](../implementing/evaluatemetrics.md/#using-the-horizontalpodautoscaler)
+Using the [HorizontalPodAutoscaler](../use-cases/hpa.md)
 for detailed information.
 
 ## Learn more
@@ -282,6 +217,6 @@ for detailed information.
 To learn more about the Keptn Metrics Server, see:
 
 - Architecture:
-  [Keptn Metrics Operator](../architecture/components/metrics-operator.md)
+  [Keptn Metrics Operator](../components/metrics-operator.md)
 - More information about implementing Keptn Metrics:
-  [Keptn Metrics](../implementing/evaluatemetrics.md)
+  [Keptn Metrics](../guides/evaluatemetrics.md)
